@@ -1,0 +1,16 @@
+
+      <h1>Trips</h1>
+      {{#each cubes}}
+      <div class="tripContainer">
+        <img class="tripImg" src="{{imageUrl}}">
+        <p class="tripDestiny">{{name}}</p>
+        <a class="detailsBtn" href="/trips/details/{{id}}">Details</a>
+        <a class="deleteBtn" href="/trips/delete/{{id}}">Delete</a>
+      </div>
+      {{else}}
+      <div class="noTrips">
+        <h2>Embark on Your Adventure!</h2>
+        <p>If no trips are found, let's start the journey together.</p>
+        <a class="startJourneyBtn" href="/trips/create">Start Your Journey</a>
+      </div>
+      {{/each}}
