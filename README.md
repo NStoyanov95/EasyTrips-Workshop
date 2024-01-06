@@ -3,7 +3,7 @@
 
   <p>Welcome to the EasyTrip project! This repository contains the source code for an easy-to-use trip management web application.</p>
      <ul>
-        <li><strong>app.js</strong> - Entry point of the application.</li>
+        <li><strong>index.js</strong> - Entry point of the application.</li>
         <li><strong>route.js</strong> - Defines the application routes.</li>
         <li><strong>config</strong> - Configuration files.
             <ul>
