@@ -1,5 +1,4 @@
-
-const uniqid = require('uniqid');
+const Trip = require('../models/Trip');
 
 const trips = [];
 
@@ -9,15 +8,8 @@ exports.getAllTrips = () =>{
 
 exports.getOneTrip = (id) => trips.find(trip => trip.id == id);
 
-exports.createTrip = (tripData) =>{
-    const currentTrip = {
-        id: uniqid(),
-        ...tripData
-    }
+exports.createTrip = (tripData) => Trip.create(tripData);
     
-    trips.push(currentTrip);
-    return currentTrip;
-};
 
 exports.deleteTrip = (id) =>{
     const currentTrip = this.getOneTrip(id);
