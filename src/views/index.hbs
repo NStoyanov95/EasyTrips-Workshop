@@ -1,11 +1,11 @@
 
       <h1>Trips</h1>
-      {{#each cubes}}
+      {{#each trips}}
       <div class="tripContainer">
         <img class="tripImg" src="{{imageUrl}}">
         <p class="tripDestiny">{{name}}</p>
-        <a class="detailsBtn" href="/trips/details/{{id}}">Details</a>
-        <a class="deleteBtn" href="/trips/delete/{{id}}">Delete</a>
+        <a class="detailsBtn" href="/trips/details/{{_id}}">Details</a>
+        <a class="deleteBtn" href="/trips/delete/{{_id}}">Delete</a>
       </div>
       {{else}}
       <div class="noTrips">

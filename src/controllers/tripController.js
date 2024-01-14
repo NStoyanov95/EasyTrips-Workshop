@@ -13,10 +13,10 @@ router.post('/create', (req, res) => {
     res.redirect('/');
 });
 
-router.get('/details/:id', (req, res) => {
-    const trip = tripManager.getOneTrip(req.params.id);
+router.get('/details/:id', async (req, res) => {
+    const trip = await tripManager.getOneTrip(req.params.id).lean();
 
-    res.render('details', { ...trip });
+    res.render('details', { trip });
 });
 
 router.get('/delete/:id', (req, res)=>{

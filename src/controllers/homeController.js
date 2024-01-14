@@ -3,9 +3,9 @@ const tripManager = require('../manager/tripManager');
 
 
 router.get('/', async (req, res) => {
-    const cubes = await tripManager.getAllTrips().lean();
-    console.log(cubes);
-    res.render('index', { cubes });
+    const trips = await tripManager.getAllTrips().lean();
+
+    res.render('index', { trips });
 });
 
 router.get('/about', (req, res) => {

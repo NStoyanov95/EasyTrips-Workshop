@@ -4,7 +4,7 @@ const trips = [];
 
 exports.getAllTrips = () => Trip.find();
 
-exports.getOneTrip = (id) => trips.find(trip => trip.id == id);
+exports.getOneTrip = (id) => Trip.findById(id);
 
 exports.createTrip = (tripData) => Trip.create(tripData);
     
