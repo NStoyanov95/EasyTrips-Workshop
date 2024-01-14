@@ -1,16 +1,18 @@
 
-      <h1>Trips</h1>
-      {{#each trips}}
-      <div class="tripContainer">
-        <img class="tripImg" src="{{imageUrl}}">
-        <p class="tripDestiny">{{name}}</p>
-        <a class="detailsBtn" href="/trips/details/{{_id}}">Details</a>
-        <a class="deleteBtn" href="/trips/delete/{{_id}}">Delete</a>
-      </div>
-      {{else}}
-      <div class="noTrips">
-        <h2>Embark on Your Adventure!</h2>
-        <p>If no trips are found, let's start the journey together.</p>
-        <a class="startJourneyBtn" href="/trips/create">Start Your Journey</a>
-      </div>
-      {{/each}}
+<h1>Trips</h1>
+{{#each trips}}
+<div class="tripContainer">
+  <img class="tripImg" src="{{imageUrl}}">
+  <p class="tripDestiny">{{name}}</p>
+  <div class="buttonsDiv">
+    <a class="detailsBtn" href="/trips/details/{{_id}}">Details</a>
+    <a class="deleteBtn" href="/trips/delete/{{_id}}">Delete</a>
+  </div>
+</div>
+{{else}}
+<div class="noTrips">
+  <h2>Embark on Your Adventure!</h2>
+  <p>If no trips are found, let's start the journey together.</p>
+  <a class="startJourneyBtn" href="/trips/create">Start Your Journey</a>
+</div>
+{{/each}}
