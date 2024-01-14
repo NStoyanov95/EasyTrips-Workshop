@@ -3,7 +3,8 @@
 {{#each trips}}
 <div class="tripContainer">
   <img class="tripImg" src="{{imageUrl}}">
-  <p class="tripDestiny">{{name}}</p>
+  <h3><p class="tripDestiny">{{name}}</p></h3>
+  <strong>Departure date: {{dateFrom}}</strong>
   <div class="buttonsDiv">
     <a class="detailsBtn" href="/trips/details/{{_id}}">Details</a>
     <a class="deleteBtn" href="/trips/delete/{{_id}}">Delete</a>
