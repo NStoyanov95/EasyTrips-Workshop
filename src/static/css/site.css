@@ -105,7 +105,8 @@ body > .container {
 
 .tripContainer {
   display: inline-block;
-  width: 200px;
+  width: 300px;
+  height: 400px;
   margin: 20px;
   padding: 20px;
   background-color: #ffffff;
@@ -121,8 +122,8 @@ body > .container {
 }
 
 .tripImg {
-  max-width: 100%;
-  height: auto;
+  width: 200px;
+  height: 200px;
   border-radius: 10px;
 }
 
@@ -141,6 +142,9 @@ body > .container {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+.buttonsDiv {
+  margin-top: 70px;
 }
 
 .detailsBtn {
@@ -186,6 +190,8 @@ label {
 
 input,
 textarea {
+  width: 500px;
+  height: 100px;
   margin-bottom: 20px;
   padding: 15px;
   border: 2px solid #004878;
@@ -203,6 +209,8 @@ input[type="date"] {
 }
 
 input[type="submit"] {
+  height: 50px;
+  width: 150px;
   background-color: #004878;
   color: #fff;
   padding: 15px;
@@ -295,12 +303,12 @@ input[type="submit"]:hover {
   overflow: hidden;
   text-align: center;
   padding: 40px;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .detailsCard img {
-  max-width: 100%;
-  height: auto;
+  max-width: 600px;
+  height: 300px;
   border-radius: 10px;
   margin-bottom: 20px;
 }
@@ -340,7 +348,7 @@ input[type="submit"]:hover {
 
 .commentsSection h2 {
   font-size: 2em;
-  color: #3498db;
+  color: #000000;
   border-bottom: 2px solid #3498db;
   padding-bottom: 10px;
   margin-bottom: 20px;
@@ -350,10 +358,11 @@ input[type="submit"]:hover {
   border: 1px solid #ecf0f1;
   background-color: #ecf0f1;
   border-radius: 8px;
-  padding: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  padding: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  font-size: 16px;
 }
 
 .comment p {
@@ -363,7 +372,7 @@ input[type="submit"]:hover {
 
 .comment p:first-child {
   font-weight: bold;
-  color: #3498db;
+  color: #010101;
 }
 
 .comment p:last-child {
@@ -371,15 +380,16 @@ input[type="submit"]:hover {
   color: #555;
 }
 
-/* Hover effect */
 .comment:hover {
   background-color: #3498db;
   color: #fff;
   transform: scale(1.02);
 }
 
-/* Optional transition for smoother hover effect */
 .comment:hover {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
+.comment + .comment {
+  font-size: 14px;
+}
