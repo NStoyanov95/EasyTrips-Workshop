@@ -2,9 +2,7 @@ const Trip = require('../models/Trip');
 
 const trips = [];
 
-exports.getAllTrips = () =>{
-    return trips.slice();
-};
+exports.getAllTrips = () => Trip.find();
 
 exports.getOneTrip = (id) => trips.find(trip => trip.id == id);
 
