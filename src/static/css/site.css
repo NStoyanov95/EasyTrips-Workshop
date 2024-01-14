@@ -157,7 +157,7 @@ body > .container {
 
 .detailsBtn:hover,
 .deleteBtn:hover {
-  background-color: #002a4d;
+  background-color: #3f7aaa;
 }
 
 @media screen and (max-width: 768px) {
@@ -167,7 +167,7 @@ body > .container {
 }
 
 .form {
-  max-width: 500px;
+  max-width: 530px;
   margin: 20px auto;
   background-color: #ffffff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -222,7 +222,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #002a4d;
+  background-color: #3581c0;
 }
 
 .about {
