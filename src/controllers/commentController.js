@@ -15,6 +15,6 @@ router.post('/add/:id', async (req, res)=>{
     const comment = await commentManager.addComment(commentData);
     tripManager.attachComment(req.params.id, comment._id);
     
-    res.redirect('/');
+    res.redirect(`/trips/details/${req.params.id}`);
 });
 module.exports = router;
