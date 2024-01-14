@@ -16,6 +16,7 @@
         {{#each comments}}
         <div class="comment">
           <p>{{ comment }}</p>
+          <a class="deleteBtn" href="/comments/delete/{{_id}}">Delete</a>
         </div>
         {{/each}}
         {{else}}

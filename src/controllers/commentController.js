@@ -17,4 +17,11 @@ router.post('/add/:id', async (req, res)=>{
     
     res.redirect(`/trips/details/${req.params.id}`);
 });
+
+router.get('/delete/:id', async (req, res)=>{
+   await commentManager.deleteComment(req.params.id);
+
+    res.redirect(`/`);
+
+});
 module.exports = router;
