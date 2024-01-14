@@ -6,6 +6,10 @@ const tripSchema = new mongoose.Schema({
     imageUrl: String,
     dateFrom: String,
     dateTo: String,
+    comments: {
+        type: mongoose.Types.ObjectId,
+        ref: 'Comment',
+    }
 });
 
 const Trip = mongoose.model('Trip', tripSchema);
