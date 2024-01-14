@@ -9,6 +9,19 @@
       <p><span>Date to:</span> {{trip.dateTo}}</p>
       <a class="btn" href="/">Back</a>
       <a class="btn" href="/comments/add/{{trip._id}}">Add Comment</a>
+      <div class="commentsSection">
+        <h2>Comments</h2>
+        {{#if hasComments}}
+        {{#each comments}}
+        <div class="comment">
+          <p>{{ comment }}</p>
+        </div>
+        {{/each}}
+        {{else}}
+        <h3>No comments yet!</h3>
+        {{/if}}
+      </div>
     </div>
   </div>
+
 </div>

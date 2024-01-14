@@ -2,7 +2,7 @@ const Trip = require('../models/Trip');
 
 exports.getAllTrips = () => Trip.find();
 
-exports.getOneTrip = (id) => Trip.findById(id).populate('comments')
+exports.getOneTrip = (id) => Trip.findById(id).populate('comments');
 
 exports.createTrip = (tripData) => Trip.create(tripData);
     
