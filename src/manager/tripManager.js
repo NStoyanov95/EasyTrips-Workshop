@@ -8,10 +8,4 @@ exports.getOneTrip = (id) => Trip.findById(id);
 
 exports.createTrip = (tripData) => Trip.create(tripData);
     
-
-exports.deleteTrip = (id) =>{
-    const currentTrip = this.getOneTrip(id);
-    trips.splice(trips.indexOf(currentTrip), 1);
-    return trips;
-
-};
+exports.deleteTrip = (id) => Trip.findByIdAndDelete(id);

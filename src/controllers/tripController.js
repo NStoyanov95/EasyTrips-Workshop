@@ -19,8 +19,8 @@ router.get('/details/:id', async (req, res) => {
     res.render('details', { trip });
 });
 
-router.get('/delete/:id', (req, res)=>{
-    tripManager.deleteTrip(req.params.id);
+router.get('/delete/:id', async (req, res)=>{
+    await tripManager.deleteTrip(req.params.id);
 
     res.redirect('/');
 })
