@@ -1,4 +1,5 @@
 const router = require('express').Router();
+
 const tripManager = require('../manager/tripManager');
 
 router.get('/create', (req, res) => {
@@ -23,6 +24,8 @@ router.get('/delete/:id', async (req, res)=>{
     await tripManager.deleteTrip(req.params.id);
 
     res.redirect('/');
-})
+});
+
+
 
 module.exports = router;
