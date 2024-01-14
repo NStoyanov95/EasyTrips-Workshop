@@ -2,11 +2,20 @@
 <h1>EasyTrips-WebApp</h1>
 
   <p>Welcome to the EasyTrip project! This repository contains the source code for an easy-to-use trip management web application.</p>
+
+  <h2>Technologies Used</h2>
+    <ul>
+      <li><strong>MongoDB:</strong> Database for storing trip information.</li>
+      <li><strong>Mongoose:</strong> MongoDB object modeling for Node.js.</li>
+      <li><strong>EasyTrips-WebApp:</strong> The web application built using Node.js, Express, and Handlebars.</li>
+    </ul>
+   <h2>Project Structure</h2>
      <ul>
         <li><strong>index.js</strong> - Entry point of the application.</li>
         <li><strong>route.js</strong> - Defines the application routes.</li>
         <li><strong>config</strong> - Configuration files.
             <ul>
+                <li><strong>dbConfig.js</strong> - Configures Mongoose for MongoDB connection.</li>
                 <li><strong>handlebarsConfig.js</strong> - Configures Handlebars for templating.</li>
                 <li><strong>expressConfig.js</strong> - Configures Express settings.</li>
             </ul>
@@ -51,3 +60,4 @@
         <li>Run the application: <code>npm start</code></li>
         <li>Open your browser and visit <code>http://localhost:3030</code></li>
     </ol>
+    <p>Ensure you have MongoDB installed and properly configured for the EasyTrip application to interact with the database. Update the MongoDB connection details in the appropriate configuration files if needed.</p>
