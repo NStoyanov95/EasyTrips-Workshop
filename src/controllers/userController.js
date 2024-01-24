@@ -12,9 +12,9 @@ router.get('/register', (req,res)=>{
 router.post('/register', async(req,res)=>{
     const {username, password, rePass} = req.body;
 
-    await userManager.register({username, password});
+    await userManager.register({username, password, rePass});
 
-    res.redirect('/')
+    res.redirect('/');
 
 
 });

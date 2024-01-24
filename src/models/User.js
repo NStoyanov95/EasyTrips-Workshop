@@ -5,6 +5,13 @@ const userSchema = new mongoose.Schema({
     password: String,
 });
 
+userSchema.virtual('rePass')
+    .set(function(value) {
+        if (value !== this.password) {
+            throw new mongoose.MongooseError('Password missmatch!');
+        }
+    });
+    
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;
