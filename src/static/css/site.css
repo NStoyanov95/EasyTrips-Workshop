@@ -12,7 +12,6 @@ body {
 h1 {
   text-align: center;
   margin-top: 30px;
-  font-size: 2.5em;
   color: #333;
 }
 
@@ -169,7 +168,7 @@ body > .container {
 
 .form {
   max-width: 70%;
-  margin: 20px auto; /* Centering the form horizontally */
+  margin: 20px auto;
   background-color: #ffffff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -181,7 +180,7 @@ body > .container {
 form {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centering the form elements */
+  align-items: center;
 }
 
 label {
@@ -408,7 +407,7 @@ input[type="submit"]:hover {
   border-radius: 15px;
   overflow: hidden;
   margin: auto;
-  width: 400px;
+  width: 300px;
   padding: 20px;
   text-align: center;
 }
