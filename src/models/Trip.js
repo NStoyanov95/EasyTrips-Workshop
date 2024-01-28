@@ -9,7 +9,10 @@ const tripSchema = new mongoose.Schema({
     comments: [{
         type: mongoose.Types.ObjectId,
         ref: 'Comment',
-    }]
+    }],
+    owner: {
+        type: mongoose.Types.ObjectId,
+    }
 });
 
 const Trip = mongoose.model('Trip', tripSchema);

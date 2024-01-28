@@ -8,8 +8,9 @@ router.get('/create', (req, res) => {
 
 router.post('/create', (req, res) => {
     const { name, description, imageUrl, dateFrom, dateTo } = req.body;
+    const user = req.user;
 
-    tripManager.createTrip({ name, description, imageUrl, dateFrom, dateTo });
+    tripManager.createTrip({ name, description, imageUrl, dateFrom, dateTo, owner: user });
 
     res.redirect('/');
 });
