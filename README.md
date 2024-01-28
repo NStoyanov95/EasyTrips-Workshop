@@ -1,5 +1,5 @@
 
-<h1>EasyTrips-WebApp</h1>
+<h1>EasyTripsp</h1>
 
   <p>Welcome to the EasyTrip project! This repository contains the source code for an easy-to-use trip management web application.</p>
 
