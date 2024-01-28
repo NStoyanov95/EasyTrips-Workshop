@@ -5,14 +5,26 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
-router.get('/register', (req,res)=>{
+router.post('/login', async(req, res) => {
+    const { username, password } = req.body;
+
+   const token = await userManager.login(username, password);
+
+    res.cookie('auth', token);
+
+    res.redirect('/');
+
+});
+
+
+router.get('/register', (req, res) => {
     res.render('register')
 });
 
-router.post('/register', async(req,res)=>{
-    const {username, password, rePass} = req.body;
+router.post('/register', async (req, res) => {
+    const { username, password, rePass } = req.body;
 
-    await userManager.register({username, password, rePass});
+    await userManager.register({ username, password, rePass });
 
     res.redirect('/users/login');
 
