@@ -8,22 +8,24 @@
       <p><span>Date from:</span> {{trip.dateFrom}}</p>
       <p><span>Date to:</span> {{trip.dateTo}}</p>
       <div class="btns">
-      <a class="btn" href="/">Back</a>
-      <a class="btn" href="/comments/add/{{trip._id}}">Add Comment</a>
-      <div class="commentsSection">
-        <h2>Comments</h2>
-        {{#if hasComments}}
-        {{#each comments}}
-        <div class="comment">
-          <p>{{ comment }}</p>
-          <a class="deleteBtn" href="/comments/delete/{{_id}}">Delete</a>
-        </div>
-        {{/each}}
-        {{else}}
-        <h3>No comments yet!</h3>
+        <a class="btn" href="/">Back</a>
+        {{#if isOwner}}
+        <a class="btn" href="/comments/add/{{trip._id}}">Add Comment</a>
         {{/if}}
+        <div class="commentsSection">
+          <h2>Comments</h2>
+          {{#if hasComments}}
+          {{#each comments}}
+          <div class="comment">
+            <p>{{ comment }}</p>
+            <a class="deleteBtn" href="/comments/delete/{{_id}}">Delete</a>
+          </div>
+          {{/each}}
+          {{else}}
+          <h3>No comments yet!</h3>
+          {{/if}}
+        </div>
       </div>
     </div>
-  </div>
 
-</div>
+  </div>
