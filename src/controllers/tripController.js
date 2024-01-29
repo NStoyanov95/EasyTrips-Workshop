@@ -20,7 +20,7 @@ router.get('/details/:id', async (req, res) => {
     const comments = trip.comments
     const hasComments = comments.length > 0;
     const ownerId = trip.owner.toString();
-    const userId = req.user._id
+    const userId = req.user?._id;
     const isOwner = ownerId === userId;
     res.render('details', { trip, comments, hasComments, isOwner });
 });
